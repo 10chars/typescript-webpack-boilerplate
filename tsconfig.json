@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "*": ["*"]
+    },
+    "lib": [ "dom", "esnext" ],
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "target": "es5",
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "strict": false
+  }
+}
