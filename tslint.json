@@ -1,11 +1,11 @@
 {
   "extends":[
-    "tslint:recommended",
     "tslint-config-prettier"
   ],
   "rules": {
     "no-unused-variable": [true, "local"],
-    "no-console": [true, "log"]
+    "no-console": [true, "log"],
+    "object-literal-sort-keys": false
   },
   "jsRules": {}
 }

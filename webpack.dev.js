@@ -4,7 +4,7 @@ const ErrorOverlayPlugin = require('error-overlay-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
-  entry: './src/index.ts',
+  entry: ['./src/index.ts'],
   output: {
     path: path.resolve(__dirname, 'src'),
     publicPath: '/',
@@ -18,13 +18,13 @@ module.exports = {
     contentBase: path.resolve(__dirname, 'public'),
     hot: true,
     overlay: {
-      errors: true
+      errors: true,
     },
     open: true,
     inline: true,
     host: 'localhost',
     publicPath: `/`,
-    stats: 'errors-only'
+    stats: 'errors-only',
   },
   module: {
     rules: [
@@ -38,8 +38,8 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src', 'index.ejs'),
-      title: process.env.npm_package_name
+      title: process.env.npm_package_name,
     }),
-    new ErrorOverlayPlugin()
+    new ErrorOverlayPlugin(),
   ],
 };
